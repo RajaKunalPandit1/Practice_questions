@@ -1,0 +1,19 @@
+class Solution{
+public: 
+    long long int largestPrimeFactor(int N){
+      long long maxPrime=-1;
+for(int i=2;i*i<=N;i++)
+if(N%i==0)
+{
+while(N%i==0)
+{
+maxPrime=i;
+N/=i;
+}
+}
+if(N>1)
+maxPrime=N;
+return maxPrime;
+          
+    }
+};
