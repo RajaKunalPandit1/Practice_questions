@@ -1,0 +1,9 @@
+int maxSubarraySum(int arr[], int n){
+        
+      int res=arr[0],max_end=arr[0];
+      for(int i=1;i<n;i++){
+          max_end=max(max_end+arr[i],arr[i]);
+          res=max(res,max_end);
+      }
+        return res;
+    }
